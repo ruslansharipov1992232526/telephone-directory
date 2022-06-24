@@ -6,4 +6,8 @@ public class Contact {
         this.name = name;
         this.phone = phone;
     }
+
+    public int getPhone() {
+        return phone;
+    }
 }
