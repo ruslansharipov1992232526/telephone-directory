@@ -13,10 +13,10 @@ public class PhoneBook extends Contact {
     }
     public static void a() {
         HashMap<String, List<Contact>> phones = new HashMap<>();
-        phones.put("Ruslan", 22);
-        phones.put("tol", 22);
-        phones.put("Russalan", 22);
-        phones.put("Ruslawqn", 22);
+//        phones.put("Ruslan", 22);
+//        phones.put("tol", 22);
+//        phones.put("Russalan", 22);
+//        phones.put("Ruslawqn", 22);
         System.out.println(phones);
 
     }
