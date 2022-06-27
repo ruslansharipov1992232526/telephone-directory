@@ -1,16 +1,19 @@
 import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
+import java.util.Map;
+import java.util.Random;
 
-public class PhoneBook extends Contact {
-    public static HashMap<String, List<Contact>> phones = new HashMap<>();
-    public PhoneBook(String name, int phone) {
-        super(name, phone);
+public class PhoneBook {
+    public static Map<String, Contact> phones = new HashMap<>();
+    public static Map<String, Groups> groups = new HashMap<>();
+    public static void addGroup(String name) {
+        Random random = new Random();
+        int n = random.nextInt(256);
+        groups.put(String.valueOf(n), new Groups(name));
     }
-    public static void addGroup() {
-
-    }
-    public static void addContactGroup() {
-
+    public static void addContactGroup(String name, int phone) {
+        Random random = new Random();
+        int m = random.nextInt(256);
+        phones.put(String.valueOf(m), new Contact(name, phone));
     }
 }
