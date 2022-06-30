@@ -1,19 +1,19 @@
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-
+import java.util.*;
 public class PhoneBook {
     public static Map<String, Contact> phones = new HashMap<>();
-    public static Map<String, Groups> groups = new HashMap<>();
-    public static void addGroup(String name) {
+    public static Map<String, Contact> groupsAndContact = new HashMap<>();
+    public static HashMap<String, Object> groups = new HashMap();
+    public static void addContact(String name, int phone) {
         Random random = new Random();
-        int n = random.nextInt(256);
-        groups.put(String.valueOf(n), new Groups(name));
+        int i = random.nextInt();
+        phones.put(String.valueOf(i), new Contact(name, phone));
     }
-    public static void addContactGroup(String name, int phone) {
-        Random random = new Random();
-        int m = random.nextInt(256);
-        phones.put(String.valueOf(m), new Contact(name, phone));
+    public static void search(String name) {
+//        Object obj = new Object();
+//        for (Map.Entry<String, Object> entry : groups.entrySet()) {
+//            if (obj.equals(entry.getValue())) {
+//                return entry.getKey();
+//            }
+//        }
     }
 }
